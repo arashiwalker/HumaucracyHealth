@@ -1,15 +1,16 @@
-DROP DATABASE Humaucracy_Health_db;
-CREATE DATABASE Humaucracy_Health_db;
-
-USE Humaucracy_Health_db;
-
-CREATE TABLE products (
-    id INT NOT NULL AUTO_INCREMENT,
-    first_name VARCHAR(100) NOT NULL,
-    last_name VARCHAR(100) NOT NULL,
-    user_name VARCHAR(100) NOT NULL,
-    password VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL
-    PRIMARY KEY (id)
+DROP DATABASE IF NOT EXISTS patient_visit_history;
+​
+CREATE DATABASE patient_visit_history;
+​
+/* this is how i connect to a database*/
+USE patient_visit_history;
+​
+CREATE TABLE visit_history (
+    id INT NOT NULL AUTO_INCREMENT, /* NOT NULL means that this column can not be empty, and it is called a constraint */
+    visit_date DATE,
+    patient_name VARCHAR(255),
+    doctor_name VARCHAR(255),
+    perscription VARCHAR(255),
+    note VARCHAR(255),
+    PRIMARY KEY(id) 
 );
-
