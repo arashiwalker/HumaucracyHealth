@@ -1,16 +1,39 @@
-DROP DATABASE IF NOT EXISTS patient_visit_history;
+DROP DATABASE patientInfo_db;
+CREATE DATABASE patientInfo_db;
+
+USE patientInfo_db;
 ​
-CREATE DATABASE patient_visit_history;
-​
-/* this is how i connect to a database*/
-USE patient_visit_history;
-​
+CREATE TABLE  patients (
+    id INT NOT NULL AUTO_INCREMENT, /* NOT NULL means that this column can not be empty, and it is called a constraint */
+    pat_name VARCHAR(255),
+    PRIMARY KEY(id) /* if you don't do line 11, you get an error */
+);
+
+CREATE TABLE  doctors (
+    id INT NOT NULL AUTO_INCREMENT, /* NOT NULL means that this column can not be empty, and it is called a constraint */
+    pat_id INT NOT NULL,
+    doc_name VARCHAR(255),
+    FOREIGN KEY (pat_id) REFERENCES patients(id),
+    PRIMARY KEY(id) /* if you don't do line 11, you get an error */
+);
+
+CREATE TABLE appointments (
+	id INT NOT NULL AUTO_INCREMENT,
+	doc_name VARCHAR(255),
+	patient_name VARCHAR(255),
+	vis_date DATE,
+	vis_time TIME,
+	-- FOREIGN KEY (pat_id) REFERENCES patients(id),
+	-- FOREIGN KEY (doc_id) REFERENCES doctors(id),
+PRIMARY KEY(id)
+);
+
 CREATE TABLE visit_history (
     id INT NOT NULL AUTO_INCREMENT, /* NOT NULL means that this column can not be empty, and it is called a constraint */
-    visit_date DATE,
-    patient_name VARCHAR(255),
-    doctor_name VARCHAR(255),
-    perscription VARCHAR(255),
+    appt_id INT NOT NULL,
     note VARCHAR(255),
+    -- FOREIGN KEY (pat_id) REFERENCES patients(id),
+    -- FOREIGN KEY (doc_id) REFERENCES doctors(id),
+    FOREIGN KEY (appt_id) REFERENCES appointments(id),
     PRIMARY KEY(id) 
 );
