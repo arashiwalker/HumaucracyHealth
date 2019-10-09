@@ -3554,7 +3554,7 @@ NOTE: use percentage font sizes or else old IE chokes
     border-color: #66615B; }
     .fc button.btn-simple:hover, .fc button.btn-simple:focus, .fc button.btn-simple:active {
       background-color: transparent;
-      color: #403D39;
+      color: #816687;
       border-color: #403D39;
       box-shadow: none; }
   .fc button.btn-link {
@@ -4808,7 +4808,7 @@ License - nucleoapp.com/license/
   border-radius: 3px;
   padding: 11px 22px;
   cursor: pointer;
-  background-color: #66615B;
+  background-color: #816687;
   color: #FFFFFF;
   transition: all 150ms linear; }
   .btn:hover, .btn:focus, .btn:active, .btn.active, .btn:active:focus, .btn:active:hover, .btn.active:focus, .btn.active:hover,
@@ -4829,7 +4829,7 @@ License - nucleoapp.com/license/
   .navbar .navbar-nav > a.btn.dropdown-toggle:focus,
   .show >
   .navbar .navbar-nav > a.btn.dropdown-toggle:hover {
-    background-color: #403D39 !important;
+    background-color: #816687 !important;
     color: #FFFFFF !important;
     box-shadow: none !important; }
   .btn:not([data-action]):hover,
@@ -6716,12 +6716,12 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
     box-shadow: none;
     border-bottom: 1px solid #ddd; }
     .navbar.navbar-transparent a:not(.dropdown-item):not(.btn) {
-      color: #66615B; }
+      color: #816687; }
       .navbar.navbar-transparent a:not(.dropdown-item):not(.btn).disabled {
         opacity: .5;
-        color: #66615B; }
+        color: #816687; }
     .navbar.navbar-transparent .button-bar {
-      background: #66615B; }
+      background: #816687; }
     .navbar.navbar-transparent .nav-item .nav-link:not(.btn) {
       color: #66615B; }
     .navbar.navbar-transparent .nav-item.active .nav-link:not(.btn),
@@ -8947,7 +8947,7 @@ img {
   position: relative;
   float: right;
   width: calc(100% - 260px);
-  background-color: #f4f3ef;
+  background-color: #ffffff;
   transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1); }
   .main-panel > .content {
     padding: 0 30px 30px;
@@ -9189,7 +9189,7 @@ img {
 
 .card {
   border-radius: 12px;
-  box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.3);
   background-color: #FFFFFF;
   color: #252422;
   margin-bottom: 20px;
