@@ -4986,7 +4986,7 @@ License - nucleoapp.com/license/
   .show > .btn-primary.dropdown-toggle,
   .show > .btn-primary.dropdown-toggle:focus,
   .show > .btn-primary.dropdown-toggle:hover {
-    background-color: #34b5b8 !important;
+    background-color: #816687 !important;
     color: #FFFFFF !important;
     box-shadow: none !important; }
   .btn-primary:not([data-action]):hover {
@@ -5005,14 +5005,14 @@ License - nucleoapp.com/license/
     border-color: #816687; }
     .btn-primary.btn-simple:hover, .btn-primary.btn-simple:focus, .btn-primary.btn-simple:active {
       background-color: transparent;
-      color: #34b5b8;
-      border-color: #34b5b8;
+      color: #816687;
+      border-color: #816687;
       box-shadow: none; }
   .btn-primary.btn-link {
     color: #816687; }
     .btn-primary.btn-link:hover, .btn-primary.btn-link:focus, .btn-primary.btn-link:active, .btn-primary.btn-link:active:focus {
       background-color: transparent;
-      color: #34b5b8;
+      color: #816687;
       text-decoration: none;
       box-shadow: none; }
 
@@ -5396,10 +5396,10 @@ License - nucleoapp.com/license/
   .show > .btn-neutral.dropdown-toggle:focus,
   .show > .btn-neutral.dropdown-toggle:hover {
     background-color: #FFFFFF !important;
-    color: #34b5b8 !important;
+    color: #816687 !important;
     box-shadow: none !important; }
   .btn-neutral:hover, .btn-neutral:focus {
-    color: #34b5b8 !important; }
+    color: #816687 !important; }
     .btn-neutral:hover:not(.nav-link), .btn-neutral:focus:not(.nav-link) {
       box-shadow: none; }
   .btn-neutral.btn-simple {
