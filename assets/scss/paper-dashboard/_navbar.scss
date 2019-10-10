@@ -14,6 +14,8 @@
         &.dropdown-item{
             color: $default-color;
         }
+
+
     }
 
 
@@ -30,6 +32,7 @@
       .input-group-prepend .input-group-text i,
       .input-group-append .input-group-text i{
         color: $default-color;
+        
         opacity: .5;
       }
     }
