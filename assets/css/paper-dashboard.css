@@ -1833,7 +1833,7 @@ body.swal2-iosfix {
     -webkit-font-smoothing: subpixel-antialiased;
     top: 0px;
     left: 0px;
-    background-color: #66615B;
+    background-color: #816687;
     box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
     color: #FFFFFF !important;
     cursor: pointer;
@@ -1963,7 +1963,7 @@ body.swal2-iosfix {
       height: 116px;
       width: 116px;
       border-radius: 50%;
-      color: #66615B;
+      color: #816687;
       margin: 0 auto 20px;
       border: 1px solid #E3E3E3;
       transition: all 0.2s;
@@ -1975,7 +1975,7 @@ body.swal2-iosfix {
       left: 0;
       right: 0; }
     .card-wizard .choice:hover .icon, .card-wizard .choice.active .icon {
-      border-color: #2ca8ff; }
+      border-color: #816687; }
     .card-wizard .choice input[type="radio"],
     .card-wizard .choice input[type="checkbox"] {
       position: absolute;

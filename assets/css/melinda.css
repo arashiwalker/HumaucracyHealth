@@ -1,0 +1,19 @@
+
+@font-face {
+    font-family: "GT Super";
+    src: url(/assets/fonts/GT-Super-Display-Super.otf)
+}
+
+h1 {
+    font-family: "GT Super";
+    color: #816687;
+    font-weight: bolder;
+    font-size: 70px;
+}
+
+h2 {
+    font-family: "GT Super";
+    color: #816687;
+    font-weight: bold;
+    font-size: 20px;
+}
