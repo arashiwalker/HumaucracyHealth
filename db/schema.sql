@@ -1,6 +1,3 @@
-DROP DATABASE patientInfo_db;
-CREATE DATABASE patientInfo_db;
-
 USE patientInfo_db;
 ​
 CREATE TABLE  patients (
@@ -9,7 +6,7 @@ CREATE TABLE  patients (
     PRIMARY KEY(id) /* if you don't do line 11, you get an error */
 );
 
-CREATE TABLE  doctors (
+CREATE TABLE  charts (
     id INT NOT NULL AUTO_INCREMENT, /* NOT NULL means that this column can not be empty, and it is called a constraint */
     pat_id INT NOT NULL,
     doc_name VARCHAR(255),
