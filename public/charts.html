@@ -18,7 +18,6 @@
   <!-- CSS Files -->
   <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
   <link href="../assets/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
-   <link href="../assets/css/melinda.css" rel="stylesheet"/>
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../assets/demo/demo.css" rel="stylesheet" />
 </head>
@@ -190,7 +189,7 @@
           <!--      Wizard container        -->
           <div class="wizard-container">
             <div class="card card-wizard" data-color="primary" id="wizardProfile">
-              <form action="" method="">
+              <form id="insertForm" action="/charts" method="POST">
                 <!--        You can switch " data-color="primary" "  with one of the next bright colors: "green", "orange", "red", "blue"       -->
                 <div class="card-header text-center">
                   <h3 class="card-title" style="color:#816687;"><b>
@@ -263,25 +262,25 @@
                         <div class="col-sm-7">
                           <div class="form-group">
                             <label>Telephone</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" name="telephone">
                           </div>
                         </div>
                         <div class="col-sm-3">
                           <div class="form-group">
                             <label>Age</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" name="age">
                           </div>
                         </div>
                         <div class="col-sm-5">
                           <div class="form-group">
                             <label>Date of Birth</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" name="dob">
                           </div>
                         </div>
                         <div class="col-sm-5">
                           <div class="form-group select-wizard">
                             <label>Sex</label>
-                            <select class="selectpicker" data-size="7" data-style="btn btn-primary btn-round" title="Single Select">
+                            <select class="selectpicker" data-size="7" data-style="btn btn-primary btn-round" title="Single Select" name="sex">
                               <option value="Male"> Male </option>
                               <option value="Female"> Female </option>
                               <option value="Other"> Other </option>
@@ -298,25 +297,25 @@
                         <div class="col-sm-7">
                           <div class="form-group">
                             <label>Address</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" name="address">
                           </div>
                         </div>
                         <div class="col-sm-3">
                           <div class="form-group">
                             <label>Postal Code</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" name="postalcode">
                           </div>
                         </div>
                         <div class="col-sm-5">
                           <div class="form-group">
                             <label>City</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" name="city">
                           </div>
                         </div>
                         <div class="col-sm-5">
                           <div class="form-group select-wizard">
                             <label>Country</label>
-                            <select class="selectpicker" data-size="7" data-style="btn btn-primary btn-round" title="Single Select">
+                            <select class="selectpicker" data-size="7" data-style="btn btn-primary btn-round" title="Single Select" name="country">
                               <option value="Afghanistan"> Afghanistan </option>
                               <option value="Albania"> Albania </option>
                               <option value="Algeria"> Algeria </option>
@@ -426,13 +425,137 @@
   <script src="../assets/demo/demo.js"></script>
   <script>
     $(document).ready(function() {
-      // Initialise the wizard
       demo.initWizard();
       setTimeout(function() {
         $('.card.card-wizard').addClass('active');
       }, 600);
     });
   </script>
+    <script type="text/javascript">
+    
+    function firstName(){
+      event.preventDefault();
+      
+      var FN = $("#insertForm input[name=firstname]").val();
+      $.ajax({
+        url: '/insert',
+        method: 'POST',
+        data: {first_name : FN}
+      });
+    }
+
+    function lastName(){
+      event.preventDefault();
+      
+      var LN = $("#insertForm input[name=lastname]").val();
+      $.ajax({
+        url: '/insert',
+        method: 'POST',
+        data: {last_name : LN}
+      });
+    }
+
+    function telephone(){
+      event.preventDefault();
+      
+      var TP = $("#insertForm input[name=telephone]").val();
+      $.ajax({
+        url: '/insert',
+        method: 'POST',
+        data: {telephone : TP}
+      });
+    }
+
+    function email(){
+      event.preventDefault();
+      
+      var EM = $("#insertForm input[name=email]").val();
+      $.ajax({
+        url: '/insert',
+        method: 'POST',
+        data: {email : EM}
+      });
+    }
+
+    function address(){
+      event.preventDefault();
+      
+      var AD = $("#insertForm input[name=address]").val();
+      $.ajax({
+        url: '/insert',
+        method: 'POST',
+        data: {address : AD}
+      });
+    }
+
+    function city(){
+      event.preventDefault();
+      
+      var CT = $("#insertForm input[name=city]").val();
+      $.ajax({
+        url: '/insert',
+        method: 'POST',
+        data: {city : CT}
+      });
+    }
+
+    function country(){
+      event.preventDefault();
+      
+      var CY = $("#insertForm input[name=country]").val();
+      $.ajax({
+        url: '/insert',
+        method: 'POST',
+        data: {country : CY}
+      });
+    }
+
+    function postalCode(){
+      event.preventDefault();
+      
+      var PC = $("#insertForm input[name=postalcode]").val();
+      $.ajax({
+        url: '/insert',
+        method: 'POST',
+        data: {postal_code : PC}
+      });
+    }
+
+    function dateOfBirth(){
+      event.preventDefault();
+      
+      var DOB = $("#insertForm input[name=dob]").val();
+      $.ajax({
+        url: '/insert',
+        method: 'POST',
+        data: {date_of_birth : DOB}
+      });
+    }
+
+    function age(){
+      event.preventDefault();
+      
+      var AG = $("#insertForm input[name=age]").val();
+      $.ajax({
+        url: '/insert',
+        method: 'POST',
+        data: {age : AG}
+      });
+    }
+
+    function sex(){
+      event.preventDefault();
+      
+      var SX = $("#insertForm input[name=sex]").val();
+      $.ajax({
+        url: '/insert',
+        method: 'POST',
+        data: {sex : SX}
+      });
+    }
+    
+  </script>
+  
 </body>
 
 </html>
